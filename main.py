@@ -64,7 +64,7 @@ def score_sentences(sentences, freqTable):
     return sentenceValue
 
 # def main():
-    # path = "sample.pdf"
+    # path = "example.pdf"
     # pdfExtractor(path)
 
 def pdfExtractor(path):
@@ -89,7 +89,7 @@ def pdfExtractor(path):
     print(summary)
 
     pdfFileObj.close()
-    return summary
+    return (summary,text1)
 
 # if __name__ == "__main__":
 #     main()

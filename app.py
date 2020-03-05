@@ -15,8 +15,8 @@ def success():
     if request.method == 'POST':
         f = request.files['file']
         f.save(os.path.join(app.config['UPLOAD_FOLDER'], f.filename))
-        summ = pdfExtractor(f.filename)
-        return render_template("success.html", name=f.filename, sum=summ)
+        (summ,text1) = pdfExtractor(f.filename)
+        return render_template("success.html", name=f.filename, sum=summ, tex=text1 )
 
 
 if __name__ ==  '__main__':
