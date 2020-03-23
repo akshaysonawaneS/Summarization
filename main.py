@@ -1,11 +1,16 @@
+import urllib
+from urllib.request import urlopen
 import PyPDF2
+from bs4 import BeautifulSoup, Comment
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize, sent_tokenize
 
+
+
 text = []
 
-def create_frequency_table(text_string) -> dict:
+def create_frequency_table(text_string):
 
     stopWords = set(stopwords.words("english"))
     words = word_tokenize(text_string)
@@ -64,10 +69,19 @@ def score_sentences(sentences, freqTable):
     return sentenceValue
 
 # def main():
-    # path = "example.pdf"
-    # pdfExtractor(path)
+#     html = urllib.request.urlopen('https://en.wikipedia.org/wiki/Computer').read()
+#     txt = text_from_html(html)
+#     freq_table = create_frequency_table(txt)  # Creating frequency table
+#     sentences = sent_tokenize(txt)  # Tokenize Sentence
+#     sentence_scores = score_sentences(sentences, freq_table)
+#     threshold = find_average_score(sentence_scores)
+#     summary = generate_summary(sentences, sentence_scores, 1.5 * threshold)
+#     print(summary)
 
 def pdfExtractor(path):
+    summary = ''
+    text1 = ''
+    text=[]
     path = "uploads/" + path
     pdfFileObj = open(path, 'rb')
     pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
@@ -92,4 +106,4 @@ def pdfExtractor(path):
     return (summary,text1)
 
 # if __name__ == "__main__":
-#     main()
+#      main()

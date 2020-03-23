@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">WebSiteName</a>
+            </div>
+          <!-- Links -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/">File Upload</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="text">Text</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="url">Url</a>
+            </li>
+          </ul>
+        </nav>
+</head>
+<body>
+    <div align="center" style="background: lightblue;">
+        <h3>Enter the text</h3>
+        <form action = "/success" method = "post" enctype="multipart/form-data">
+            <input style="width: 95%; height: 700dp;" type="text" name="text" />
+
+        </form>
+        <br>
+    </div>
+
+</body>
+</html>

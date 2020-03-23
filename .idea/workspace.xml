@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9302daed-6200-4551-9340-64057e9b8890" name="Default Changelist" comment="" />
+    <list default="true" id="9302daed-6200-4551-9340-64057e9b8890" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/text.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/url.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Summurize.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Summurize.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/upload_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/upload_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/sample.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/nltk-3.4.5-py3.7.egg-info/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/nltk-3.4.5-py3.7.egg-info/PKG-INFO" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/nltk-3.4.5-py3.7.egg-info/requires.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/nltk-3.4.5-py3.7.egg-info/requires.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +40,16 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Meme_API" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="Summurize" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="Summurize" />
+      </console-settings>
+    </option>
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -81,35 +102,39 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="141" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1582550983079" />
-    <state width="1344" height="174" key="GridCell.Tab.0.bottom" timestamp="1583050302163">
-      <screen x="0" y="31" width="1366" height="737" />
+    <state x="466" y="155" width="424" height="482" key="FileChooserDialogImpl" timestamp="1584889691999">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="172" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1582554543247" />
+    <state x="466" y="155" width="424" height="482" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1584889691999" />
+    <state width="1343" height="174" key="GridCell.Tab.0.bottom" timestamp="1584932541892">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1343" height="174" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1584932541892" />
     <state width="1344" height="174" key="GridCell.Tab.0.bottom/0.31.1366.737@0.31.1366.737" timestamp="1583050302163" />
-    <state width="1344" height="174" key="GridCell.Tab.0.center" timestamp="1583050302160">
-      <screen x="0" y="31" width="1366" height="737" />
+    <state width="1343" height="174" key="GridCell.Tab.0.center" timestamp="1584932541892">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="172" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1582554543246" />
+    <state width="1343" height="174" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1584932541892" />
     <state width="1344" height="174" key="GridCell.Tab.0.center/0.31.1366.737@0.31.1366.737" timestamp="1583050302160" />
-    <state width="1344" height="174" key="GridCell.Tab.0.left" timestamp="1583050302160">
-      <screen x="0" y="31" width="1366" height="737" />
+    <state width="1343" height="174" key="GridCell.Tab.0.left" timestamp="1584932541891">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="172" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1582554543246" />
+    <state width="1343" height="174" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1584932541891" />
     <state width="1344" height="174" key="GridCell.Tab.0.left/0.31.1366.737@0.31.1366.737" timestamp="1583050302160" />
-    <state width="1344" height="174" key="GridCell.Tab.0.right" timestamp="1583050302160">
-      <screen x="0" y="31" width="1366" height="737" />
+    <state width="1343" height="174" key="GridCell.Tab.0.right" timestamp="1584932541892">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="172" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1582554543247" />
+    <state width="1343" height="174" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1584932541892" />
     <state width="1344" height="174" key="GridCell.Tab.0.right/0.31.1366.737@0.31.1366.737" timestamp="1583050302160" />
-    <state x="172" y="32" width="1007" height="733" key="SettingsEditor" timestamp="1584602157502">
+    <state x="172" y="32" width="1007" height="733" key="SettingsEditor" timestamp="1584889963878">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="172" y="32" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1584602157502" />
+    <state x="172" y="32" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1584889963878" />
     <state x="172" y="35" width="1007" height="733" key="SettingsEditor/0.31.1366.737@0.31.1366.737" timestamp="1583046527216" />
-    <state x="354" y="226" key="com.intellij.ide.util.TipDialog" timestamp="1584602134178">
+    <state x="354" y="226" key="com.intellij.ide.util.TipDialog" timestamp="1584932729612">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="354" y="226" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1584602134178" />
+    <state x="354" y="226" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1584932729612" />
     <state x="354" y="229" key="com.intellij.ide.util.TipDialog/0.31.1366.737@0.31.1366.737" timestamp="1583042953210" />
   </component>
 </project>
