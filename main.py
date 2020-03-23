@@ -68,15 +68,14 @@ def score_sentences(sentences, freqTable):
 
     return sentenceValue
 
-# def main():
-#     html = urllib.request.urlopen('https://en.wikipedia.org/wiki/Computer').read()
-#     txt = text_from_html(html)
-#     freq_table = create_frequency_table(txt)  # Creating frequency table
-#     sentences = sent_tokenize(txt)  # Tokenize Sentence
-#     sentence_scores = score_sentences(sentences, freq_table)
-#     threshold = find_average_score(sentence_scores)
-#     summary = generate_summary(sentences, sentence_scores, 1.5 * threshold)
-#     print(summary)
+def main():
+    txt = pdfExtractor()
+    freq_table = create_frequency_table(txt)
+    sentences = sent_tokenize(txt)
+    sentence_scores = score_sentences(sentences, freq_table)
+    threshold = find_average_score(sentence_scores)
+    summary = generate_summary(sentences, sentence_scores, 1.5 * threshold)
+    print(summary)
 
 def pdfExtractor(path):
     summary = ''
@@ -105,5 +104,5 @@ def pdfExtractor(path):
     pdfFileObj.close()
     return (summary,text1)
 
-# if __name__ == "__main__":
-#      main()
+if __name__ == "__main__":
+     main()
