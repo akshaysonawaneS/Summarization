@@ -5,7 +5,7 @@ from flask import *
 from main import pdfExtractor
 
 
-UPLOAD_FOLDER = '/home/Akshay/Projects/Python/Summurize/uploads'
+UPLOAD_FOLDER = '/app/uploads'
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER

@@ -97,9 +97,9 @@ def pdfExtractor(path):
     sentence_scores = score_sentences(sentences, freq_table)
     threshold = find_average_score(sentence_scores)
     summary = generate_summary(sentences, sentence_scores, 1.5 * threshold)
-    print(text1)
-    print("----------------------------After Summurize---------------------------------------")
-    print(summary)
+    # print(text1)
+    # print("----------------------------After Summurize---------------------------------------")
+    # print(summary)
 
     pdfFileObj.close()
     return (summary,text1)
