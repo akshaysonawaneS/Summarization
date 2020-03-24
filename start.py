@@ -4,7 +4,7 @@ from werkzeug.utils import secure_filename
 from flask import *
 from main import pdfExtractor
 
-UPLOAD_FOLDER = '/app   /uploads'
+UPLOAD_FOLDER = '/app/uploads'
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
