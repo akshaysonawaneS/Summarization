@@ -3,40 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9302daed-6200-4551-9340-64057e9b8890" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/abc/README" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/abc/rural.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/abc/science.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/IC-compute.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/IC-semcor.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/README" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/ic-bnc-add1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/ic-bnc-resnik-add1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/ic-bnc-resnik.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/ic-bnc.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/ic-brown-add1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/ic-brown-resnik-add1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/ic-brown-resnik.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/ic-brown.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/ic-semcor-add1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/ic-semcor.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/ic-semcorraw-add1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/ic-semcorraw-resnik-add1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/ic-semcorraw-resnik.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/ic-semcorraw.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/ic-shaks-add1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/ic-shaks-resnik.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/ic-shaks-resnink-add1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/ic-shaks.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/ic-treebank-add1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/ic-treebank-resnik-add1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/ic-treebank-resnik.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/ic-treebank.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/shaks12.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/stoplist.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/wordnet_ic/wn30compounds.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/words/README" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/words/en" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nltk_data/Corpora/words/en-basic" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
