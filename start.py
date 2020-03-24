@@ -53,7 +53,7 @@ def apiUpload():
         filename = secure_filename(file.filename)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         (summ, text1) = pdfExtractor(file.filename)
-        resp = jsonify({'Text':text1,'summuary': summ})
+        resp = jsonify({'Text' : text1, 'summuary': summ})
         resp.status_code = 201
         return resp
     else:

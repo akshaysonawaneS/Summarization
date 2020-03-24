@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9302daed-6200-4551-9340-64057e9b8890" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirement.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,10 +122,10 @@
     </state>
     <state x="172" y="32" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1584889963878" />
     <state x="172" y="35" width="1007" height="733" key="SettingsEditor/0.31.1366.737@0.31.1366.737" timestamp="1583046527216" />
-    <state x="354" y="226" key="com.intellij.ide.util.TipDialog" timestamp="1584932729612">
+    <state x="354" y="226" key="com.intellij.ide.util.TipDialog" timestamp="1585023378933">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="354" y="226" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1584932729612" />
+    <state x="354" y="226" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1585023378933" />
     <state x="354" y="229" key="com.intellij.ide.util.TipDialog/0.31.1366.737@0.31.1366.737" timestamp="1583042953210" />
   </component>
 </project>
