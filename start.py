@@ -1,8 +1,7 @@
 import os
-import urllib.request
 from werkzeug.utils import secure_filename
 from flask import *
-from main import pdfExtractor
+from main import starter
 
 UPLOAD_FOLDER = '/app/uploads'
 
@@ -23,7 +22,7 @@ def success():
     if request.method == 'POST':
         f = request.files['file']
         f.save(os.path.join(app.config['UPLOAD_FOLDER'], f.filename))
-        (summ,text1) = pdfExtractor(f.filename)
+        (summ,text1) = starter(f.filename)
         return render_template("success.html", name=f.filename, sum=summ, tex=text1 )
 
 @app.route('/text')
@@ -51,7 +50,7 @@ def apiUpload():
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        (summ, text1) = pdfExtractor(file.filename)
+        (summ, text1) = starter(file.filename)
         resp = jsonify({'Text' : text1, 'summuary': summ})
         resp.status_code = 201
         return resp

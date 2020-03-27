@@ -78,6 +78,22 @@ def main():
     summary = generate_summary(sentences, sentence_scores, 1.5 * threshold)
     print(summary)
 
+def txtExtracter(path):
+    summary = ''
+    text1 = ''
+    text = []
+    path = "uploads/" + path
+
+    text1 = ''.join(text)
+
+    freq_table = create_frequency_table(text1)  # Creating frequency table
+    sentences = sent_tokenize(text1)  # Tokenize Sentence
+    sentence_scores = score_sentences(sentences, freq_table)
+    threshold = find_average_score(sentence_scores)
+    summary = generate_summary(sentences, sentence_scores, 1.5 * threshold)
+
+    return (summary, text1)
+
 def pdfExtractor(path):
     summary = ''
     text1 = ''
@@ -92,18 +108,23 @@ def pdfExtractor(path):
         text.append(pageObj.extractText())
 
     text1 = ''.join(text)
-
     freq_table = create_frequency_table(text1)                                  # Creating frequency table
     sentences = sent_tokenize(text1)                                            # Tokenize Sentence
     sentence_scores = score_sentences(sentences, freq_table)
     threshold = find_average_score(sentence_scores)
     summary = generate_summary(sentences, sentence_scores, 1.5 * threshold)
-    # print(text1)
-    # print("----------------------------After Summurize---------------------------------------")
-    # print(summary)
-
     pdfFileObj.close()
+
     return (summary,text1)
 
+def allowed_file(filename):
+	return filename.rsplit('.', 1)[1].lower()
+
+def starter(path):
+    if "txt" == allowed_file(path):
+        return txtExtracter(path)
+    elif "pdf" == allowed_file(path):
+        return pdfExtractor(path)
+
 if __name__ == "__main__":
-     main()
+    starter()
