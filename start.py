@@ -2,6 +2,8 @@ import os
 from werkzeug.utils import secure_filename
 from flask import *
 from main import starter
+import nltk
+nltk.downloade('stopwords')
 
 UPLOAD_FOLDER = '/app/uploads'
 
