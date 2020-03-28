@@ -1,13 +1,7 @@
-import urllib
-from urllib.request import urlopen
 import PyPDF2
-from bs4 import BeautifulSoup, Comment
-
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize, sent_tokenize
-
-
 
 text = []
 
