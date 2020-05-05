@@ -1,9 +1,9 @@
 import os
 from werkzeug.utils import secure_filename
 from flask import *
-from main import starter
+from main import starter,main
 
-UPLOAD_FOLDER = '/app/uploads'
+UPLOAD_FOLDER = os.path.abspath('uploads')
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -25,13 +25,18 @@ def success():
         (summ,text1) = starter(f.filename)
         return render_template("success.html", name=f.filename, sum=summ, tex=text1 )
 
+@app.route('/successText', methods = ['POST'])
+def success1():
+    if request.method == 'POST':
+        text = request.form["texta"]
+        sum1 = main(text)
+
+        return render_template("successA.html", sum=sum1, tex=text)
+
 @app.route('/text')
 def text():
     return render_template("text.html")
 
-@app.route('/url')
-def url():
-    return render_template("url.html")
 
 @app.route('/apiFileUpload', methods=['POST'])
 def apiUpload():
@@ -44,7 +49,7 @@ def apiUpload():
 
     if file.filename == '':
         resp = jsonify({'message': 'No file selected for uploading'})
-        resp.status_code = 400
+        resp.status_code = 402
         return resp
 
     if file and allowed_file(file.filename):
@@ -56,9 +61,9 @@ def apiUpload():
         return resp
     else:
         resp = jsonify({'message': 'Allowed file types are pdf'})
-        resp.status_code = 400
+        resp.status_code = 403
         return resp
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
 

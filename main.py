@@ -13,14 +13,14 @@ def create_frequency_table(text_string):
 
     freqTable = dict()
     for word in words:
-        word = ps.stem(word)
-        if word in stopWords:
-            continue
-        if word in freqTable:
-            freqTable[word] += 1
-        else:
-            freqTable[word] = 1
-
+        if(word != '\n'):
+            word = ps.stem(word)
+            if word in stopWords:
+                continue
+            if word in freqTable:
+                freqTable[word] += 1
+            else:
+                freqTable[word] = 1
     return freqTable
 
 
@@ -37,7 +37,7 @@ def generate_summary(sentences, sentenceValue, threshold):
 
 
 
-def find_average_score(sentenceValue):
+def find_average_score(sentenceValue)->int:
     sumValues = 0
     for entry in sentenceValue:
         sumValues += sentenceValue[entry]
@@ -47,7 +47,7 @@ def find_average_score(sentenceValue):
 
     return average
 
-def score_sentences(sentences, freqTable):
+def score_sentences(sentences, freqTable)->dict:
     sentenceValue = dict()
 
     for sentence in sentences:
@@ -63,22 +63,25 @@ def score_sentences(sentences, freqTable):
 
     return sentenceValue
 
-def main():
-    txt = pdfExtractor()
+def main(txt):
+
     freq_table = create_frequency_table(txt)
     sentences = sent_tokenize(txt)
     sentence_scores = score_sentences(sentences, freq_table)
     threshold = find_average_score(sentence_scores)
-    summary = generate_summary(sentences, sentence_scores, 1.5 * threshold)
+    summary = generate_summary(sentences, sentence_scores,threshold)
     print(summary)
+    print()
+    print(txt)
+    return summary
 
 def txtExtracter(path):
     summary = ''
     text1 = ''
     text = []
-    path = "uploads/" + path
-
-    text1 = ''.join(text)
+    path1 = "uploads/" + path
+    text = open(path1, "r")
+    text1 = text.read()
 
     freq_table = create_frequency_table(text1)  # Creating frequency table
     sentences = sent_tokenize(text1)  # Tokenize Sentence
@@ -103,11 +106,13 @@ def pdfExtractor(path):
 
     text1 = ''.join(text)
     freq_table = create_frequency_table(text1)                                  # Creating frequency table
-    sentences = sent_tokenize(text1)                                            # Tokenize Sentence
+    sentences = sent_tokenize(text1)
+    print(sentences)
     sentence_scores = score_sentences(sentences, freq_table)
     threshold = find_average_score(sentence_scores)
     summary = generate_summary(sentences, sentence_scores, 1.5 * threshold)
     pdfFileObj.close()
+    print(summary)
 
     return (summary,text1)
 

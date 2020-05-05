@@ -1,9 +1,30 @@
 <html>
 <head>
 <title>Success</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Summarizer</a>
+            </div>
+          <!-- Links -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/">File Upload</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="text">Text</a>
+            </li>
+          </ul>
+        </nav>
 </head>
+
+
 <body>
-    <div align="justify">
+    <div style="background: #D3D3D3; margin:0; height: 100%; width: 100%; padding-left: 20; padding-right: 20; position: absolute;">
         <p><h3>File Uploaded Successfully</h3></p>
         <p><b>File Name:</b> {{name}}</p>
         <p><b>Summary:</b> {{sum}}</p>
