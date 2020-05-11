@@ -1,23 +1,85 @@
+from nltk.stem import PorterStemmer
+from nltk.tokenize import word_tokenize, sent_tokenize
+
+def create_frequency_table(text_string):
+    mr_stopwords = []
+    punctuation = [",", ".", "?", "!", "\"", "\'", ":", ";"]
+    with open("res/marathiStopwords.txt", encoding="utf-8-sig") as fd:
+        mr_stopwords = fd.read().split("\n")
+    mr_stopwords = mr_stopwords
+    words = word_tokenize(text_string)
+    ps = PorterStemmer()
+
+    freqTable = dict()
+    for word in words:
+        if(word != '\n'):
+            word = ps.stem(word)
+            if word in mr_stopwords and word in punctuation:
+                continue
+            if word in freqTable:
+                freqTable[word] += 1
+            else:
+                freqTable[word] = 1
+    return freqTable
+
+def score_sentences(sentences, freqTable)->dict:
+    sentenceValue = dict()
+
+    for sentence in sentences:
+        word_count_in_sentence = (len(word_tokenize(sentence)))
+        for wordValue in freqTable:
+            if wordValue in sentence:
+                if sentence[:10] in sentenceValue:
+                    sentenceValue[sentence[:10]] += freqTable[wordValue]
+                else:
+                    sentenceValue[sentence[:10]] = freqTable[wordValue]
+
+        sentenceValue[sentence[:10]] = sentenceValue[sentence[:10]] // word_count_in_sentence
+
+    return sentenceValue
+
+def find_average_score(sentenceValue)->int:
+    sumValues = 0
+    for entry in sentenceValue:
+        sumValues += sentenceValue[entry]
+
+    # Average value of a sentence from original text
+    average = int(sumValues / len(sentenceValue))
+    return average
+
+def generate_summary(sentences, sentenceValue, threshold):
+    sentence_count = 0
+    summary = ''
+
+    for sentence in sentences:
+        if sentence[:10] in sentenceValue and sentenceValue[sentence[:10]] > (threshold):
+            summary += " " + sentence
+            sentence_count += 1
+
+    return summary
+
 def starter():
-    text = """शिक्षा सबसे महत्वपूर्ण तंत्र है, जो व्यक्ति के जीवन के साथ ही देश के विकास में भी महत्वपूर्ण भूमिका निभाती है। आजकल, यह किसी भी समाज की नई पीढ़ी के उज्ज्वल भविष्य के लिए एक महत्वपूर्ण कारक बन गयी है।शिक्षा के महत्व को ध्यान में रखते हुए, सरकार के द्वारा 5 साल से 15 साल तक की आयु वाले सभी बच्चों के लिए शिक्षा को अनिवार्य कर दिया गया है।
-शिक्षा सभी के जीवन को सकारात्मक तरीके से प्रभावित करती है और हमें जीवन की सभी छोटी और बड़ी समस्याओं का समाना करना सिखाती है।
-समाज में सभी के लिए शिक्षा की ओर इतने बड़े स्तर पर जागरुक करने के बाद भी, देश के विभिन्न क्षेत्रों में शिक्षा का प्रतिशत अभी भी समान है।
+    txt = """आयुष्यात माणसाला मागितलेलं सगळंच मिळतं का?
+जगातला बहुतेक एकही माणूस या प्रश्नाचं उत्तर 'हो' असं देणार नाही.
+आणि
+दिलंच जर हो असे उत्तर, तर मग मनातल्या मनात तो स्वतःलाच हा प्रश्न पुन्हा पुन्हा विचारत बसेल की,
+खरंच आयुष्यात माणसाला मागितलेलं सगळंच मिळतं का?
 
-पिछड़े क्षेत्रों में रहने वाले लोगों के लिए अच्छी शिक्षा के उचित लाभ प्राप्त नहीं हो रहे हैं क्योंकि उनके पास धन और अन्य साधनों की कमी है।
-यद्यपि, इन क्षेत्रों में इस समस्या को सुलझाने के लिए सरकार द्वारा कुछ नई और प्रभावी रणनीतियों की योजना बनाकर लागू किया गया है।
-शिक्षा ने मानसिक स्थिति को सुधारा है और लोगों के सोचने के तरीके को बदला है।
-यह आगे बढ़ने और सफलता और अनुभव प्राप्त करने के लिए आत्मविश्वास लाती है और सोच को कार्य रुप में बदलती है।
+अजिबात काहीच मिळालं नाही असं म्हणता येत नाही. मागितलेलं मिळतंही.
+पण कधी वेळ चुकलेली असते तर कधी मागितलेलंच चुकलेलं असतं.
 
-बिना शिक्षा के जीवन लक्ष्य रहित और कठिन हो जाता है।
-इसलिए हमें शिक्षा के महत्व और दैनिक जीवन में इसकी आवश्यकता को समझना चाहिए।
-हमें पिछड़े क्षेत्रों में लोगों को शिक्षा के महत्व को बताकर, इसे प्रोत्साहन देना चाहिए।
-विकलांग और गरीब व्यक्तियों को भी अमीर और सामान्य व्यक्तियों की तरह वैश्विक विकास प्राप्त करने के लिए, शिक्षा की समान आवश्यकता है और उन्हें समान अधिकार भी प्राप्त है।
-हम में से सभी को उच्च स्तर पर शिक्षित होने के लिए अपने सबसे अच्छे प्रयासों को करने के साथ ही सभी की शिक्षा तक पहुँच को संभव बनाना चाहिए जिसमें सभी गरीब और विकलांग व्यक्ति वैश्विक आधार पर भाग ले सकें।
+आयुष्यात कितीही समाधानी झालो, तरी समाधानाच्या शेवटच्या एका टोकाला कुठेतरी एक अपुरी इच्छा जिवंत असते.
+ती ज्याची त्यालाच माहित असते. ज्याची त्यालाच लक्षात राहते.
 
-कुछ लोग ज्ञान और कौशल की कमी के कारण पूरी तरह से अशिक्षित रहकर बहुत दर्दनाक जीवन जीते हैं। कुछ लोग शिक्षित होते हैं लेकिन पिछड़े इलाकों में उचित शिक्षा प्रणाली के अभाव के कारण अपने दैनिक कार्यों के लिए धन जोड़ने में भी पर्याप्त कुशल नहीं होते।
-इस प्रकार, हमें सभी के लिए अच्छी शिक्षा प्रणाली को प्राप्त करने के समान अवसर देने की कोशिश करनी चाहिए, चाहे वो गरीब हो या अमीर। एक देश, नागरिकों के वैयक्तिक विकास और वृद्धि के बिना विकसित नही हो सकता। इस प्रकार, एक देश का व्यापक विकास उस में देश में नागरिकों के लिए उपलब्ध प्रचलित शिक्षा प्रणाली पर निर्भर करता है।
-देश में हर क्षेत्र में नागरिकों के लिए अच्छी और उचित शिक्षा प्रणाली को उपलब्ध कराए जाने के सामान्य लक्ष्य को निर्धारित किया जाना चाहिए और शिक्षा प्राप्ति के रास्ते को सुगम व सुलभ्य बनाए जाने की कोशिश की जानी चाहिए।
-इस तरह देश अपने चहुँमुखी विकास की ओर अग्रसर होगा।"""
+'वाटणं' आणि 'असणं' यातला फरक म्हणजे आयुष्य.
+    
+    """
+    freq_table = create_frequency_table(txt)
+    sentences = sent_tokenize(txt)
+    sentence_scores = score_sentences(sentences, freq_table)
+    threshold = find_average_score(sentence_scores)
+    summary = generate_summary(sentences, sentence_scores, threshold)
+    print(summary)
 
 
 if __name__ == "__main__":
