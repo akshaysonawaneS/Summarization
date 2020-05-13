@@ -1,5 +1,16 @@
 from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize, sent_tokenize
+import codecs
+stemmers = []
+
+def stemmer(word):
+    with codecs.open("res/marathi_stemmers.txt", encoding="utf-8-sig", mode="r") as f:
+        stemmers = f.read()
+    ste = stemmers.split()
+    for i in ste:
+        if word.endswith(i):
+            return word[:len(word)-len(i)]
+    return word
 
 def create_frequency_table(text_string):
     mr_stopwords = []
@@ -13,7 +24,7 @@ def create_frequency_table(text_string):
     freqTable = dict()
     for word in words:
         if(word != '\n'):
-            word = ps.stem(word)
+            word = stemmer(word)
             if word in mr_stopwords and word in punctuation:
                 continue
             if word in freqTable:
@@ -58,16 +69,15 @@ def generate_summary(sentences, sentenceValue, threshold):
 
     return summary
 
-def starter(txt):
-
+def marathi(txt):
 
     freq_table = create_frequency_table(txt)
     sentences = sent_tokenize(txt)
     sentence_scores = score_sentences(sentences, freq_table)
     threshold = find_average_score(sentence_scores)
     summary = generate_summary(sentences, sentence_scores, threshold)
-    print(summary)
+    return summary
 
 
-if __name__ == "__main__":
-    starter()
+# if __name__ == "__main__":
+#     marathi()

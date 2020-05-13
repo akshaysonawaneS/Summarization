@@ -2,6 +2,7 @@ import os
 from werkzeug.utils import secure_filename
 from flask import *
 from main import starter,main
+from Regional import marathi
 
 UPLOAD_FOLDER = os.path.abspath('uploads')
 
@@ -9,6 +10,7 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.secret_key = "akshay"
 ALLOWED_EXTENSIONS = set(['txt', 'pdf'])
+radio_button = ""
 
 def allowed_file(filename):
 	return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -29,7 +31,13 @@ def success():
 def success1():
     if request.method == 'POST':
         text = request.form["texta"]
-        sum1 = main(text)
+        radio_button = request.form["language"]
+        if radio_button == "marathi":
+            sum1 = marathi(text)
+        elif radio_button == "english":
+            sum1 = main(text)
+        else:
+            return "ERROR ERROR"
 
         return render_template("successA.html", sum=sum1, tex=text)
 
