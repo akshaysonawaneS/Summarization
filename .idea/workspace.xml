@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9302daed-6200-4551-9340-64057e9b8890" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Regional.py" beforeDir="false" afterPath="$PROJECT_DIR$/Regional.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/text.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/text.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/upload_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/upload_form.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,14 +46,14 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/nltk_data" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/nltk_data" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.Regional">
+  <component name="RunManager" selected="Python.exp6">
     <configuration name="Regional" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Summurize" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -66,6 +67,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Regional.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="exp6" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Summurize" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Experiment" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Experiment/exp6.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -118,6 +140,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.exp6" />
         <item itemvalue="Python.Regional" />
         <item itemvalue="Python.sample" />
         <item itemvalue="Python.main" />
@@ -146,35 +169,35 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="466" y="155" width="424" height="482" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1585495468032" />
-    <state width="1343" height="174" key="GridCell.Tab.0.bottom" timestamp="1589371042234">
+    <state width="1343" height="174" key="GridCell.Tab.0.bottom" timestamp="1589608356685">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="174" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1589371042234" />
+    <state width="1343" height="174" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1589608356685" />
     <state width="1344" height="174" key="GridCell.Tab.0.bottom/0.31.1366.737@0.31.1366.737" timestamp="1583050302163" />
-    <state width="1343" height="174" key="GridCell.Tab.0.center" timestamp="1589371042233">
+    <state width="1343" height="174" key="GridCell.Tab.0.center" timestamp="1589608356684">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="174" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1589371042233" />
+    <state width="1343" height="174" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1589608356684" />
     <state width="1344" height="174" key="GridCell.Tab.0.center/0.31.1366.737@0.31.1366.737" timestamp="1583050302160" />
-    <state width="1343" height="174" key="GridCell.Tab.0.left" timestamp="1589371042232">
+    <state width="1343" height="174" key="GridCell.Tab.0.left" timestamp="1589608356683">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="174" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1589371042232" />
+    <state width="1343" height="174" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1589608356683" />
     <state width="1344" height="174" key="GridCell.Tab.0.left/0.31.1366.737@0.31.1366.737" timestamp="1583050302160" />
-    <state width="1343" height="174" key="GridCell.Tab.0.right" timestamp="1589371042233">
+    <state width="1343" height="174" key="GridCell.Tab.0.right" timestamp="1589608356684">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="174" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1589371042233" />
+    <state width="1343" height="174" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1589608356684" />
     <state width="1344" height="174" key="GridCell.Tab.0.right/0.31.1366.737@0.31.1366.737" timestamp="1583050302160" />
     <state x="172" y="32" width="1007" height="733" key="SettingsEditor" timestamp="1589099416853">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="172" y="32" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1589099416853" />
     <state x="172" y="35" width="1007" height="733" key="SettingsEditor/0.31.1366.737@0.31.1366.737" timestamp="1583046527216" />
-    <state x="354" y="226" key="com.intellij.ide.util.TipDialog" timestamp="1589374458513">
+    <state x="354" y="226" key="com.intellij.ide.util.TipDialog" timestamp="1590667307712">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="354" y="226" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1589374458513" />
+    <state x="354" y="226" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1590667307712" />
     <state x="354" y="229" key="com.intellij.ide.util.TipDialog/0.31.1366.737@0.31.1366.737" timestamp="1583042953210" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1586757075252">
       <screen x="0" y="27" width="1366" height="741" />

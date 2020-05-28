@@ -2,7 +2,7 @@ import PyPDF2
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize, sent_tokenize
-
+from Regional import marathi
 text = []
 
 def create_frequency_table(text_string):
@@ -75,29 +75,39 @@ def main(txt):
     print(txt)
     return summary
 
-def txtExtracter(path):
+def txtExtracter(path, radio_button):
     summary = ''
     text1 = ''
     text = []
     path1 = "uploads/" + path
-    text = open(path1, "r")
-    text1 = text.read()
+    if radio_button == "english":
+        text = open(path1, "r")
+        text1 = text.read()
 
-    freq_table = create_frequency_table(text1)  # Creating frequency table
-    sentences = sent_tokenize(text1)  # Tokenize Sentence
-    sentence_scores = score_sentences(sentences, freq_table)
-    threshold = find_average_score(sentence_scores)
-    summary = generate_summary(sentences, sentence_scores, 1.5 * threshold)
+        freq_table = create_frequency_table(text1)  # Creating frequency table
+        sentences = sent_tokenize(text1)  # Tokenize Sentence
+        sentence_scores = score_sentences(sentences, freq_table)
+        threshold = find_average_score(sentence_scores)
+        summary = generate_summary(sentences, sentence_scores, 1.5 * threshold)
+
+    elif radio_button == "marathi":
+        text = open(path1, encoding="utf-8-sig")
+        text1 = text.read()
+        summary = marathi(text1)
 
     return (summary, text1)
 
-def pdfExtractor(path):
+def pdfExtractor(path, radio_button):
     summary = ''
     text1 = ''
     text=[]
     path = "uploads/" + path
-    pdfFileObj = open(path, 'rb')
-    pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
+    if radio_button == "english":
+        pdfFileObj = open(path, 'rb')
+        pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
+    elif radio_button == "marathi":
+        pdfFileObj = open(path, encoding="utf-8-sig")
+        pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
 
     pgno = pdfReader.numPages
     for i in range(pgno):
@@ -105,12 +115,16 @@ def pdfExtractor(path):
         text.append(pageObj.extractText())
 
     text1 = ''.join(text)
-    freq_table = create_frequency_table(text1)                                  # Creating frequency table
-    sentences = sent_tokenize(text1)
-    print(sentences)
-    sentence_scores = score_sentences(sentences, freq_table)
-    threshold = find_average_score(sentence_scores)
-    summary = generate_summary(sentences, sentence_scores, 1.5 * threshold)
+    if radio_button == "english":
+        freq_table = create_frequency_table(text1)
+        sentences = sent_tokenize(text1)
+        print(sentences)
+        sentence_scores = score_sentences(sentences, freq_table)
+        threshold = find_average_score(sentence_scores)
+        summary = generate_summary(sentences, sentence_scores, 1.5 * threshold)
+    elif radio_button == "marathi":
+        summary = marathi(text1)
+
     pdfFileObj.close()
     print(summary)
 
@@ -119,11 +133,11 @@ def pdfExtractor(path):
 def allowed_file(filename):
 	return filename.rsplit('.', 1)[1].lower()
 
-def starter(path):
+def starter(path, radio_button):
     if "txt" == allowed_file(path):
-        return txtExtracter(path)
+        return txtExtracter(path, radio_button)
     elif "pdf" == allowed_file(path):
-        return pdfExtractor(path)
+        return pdfExtractor(path, radio_button)
 
 if __name__ == "__main__":
     starter()

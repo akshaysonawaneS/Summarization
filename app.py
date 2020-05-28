@@ -22,22 +22,24 @@ def upload():
 @app.route('/success', methods = ['POST'])
 def success():
     if request.method == 'POST':
+        radio_button = request.form["language"]
         f = request.files['file']
         f.save(os.path.join(app.config['UPLOAD_FOLDER'], f.filename))
-        (summ,text1) = starter(f.filename)
-        return render_template("success.html", name=f.filename, sum=summ, tex=text1 )
+        (summ,text1) = starter(f.filename, radio_button)
+        return render_template("success.html", name=f.filename, sum=summ, tex=text1)
 
 @app.route('/successText', methods = ['POST'])
 def success1():
     if request.method == 'POST':
         text = request.form["texta"]
         radio_button = request.form["language"]
+        if text == "":
+            return "<h1>Enter the Text<h1>"
+
         if radio_button == "marathi":
             sum1 = marathi(text)
         elif radio_button == "english":
             sum1 = main(text)
-        else:
-            return "ERROR ERROR"
 
         return render_template("successA.html", sum=sum1, tex=text)
 

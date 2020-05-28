@@ -23,15 +23,21 @@
             </li>
           </ul>
         </nav>
+    <style>
+    body{
+        background-color: #d3d3d3;
+        }
+    </style>
+
 </head>
-<body bgcolor="#dde2e5">
-    <div align="center" style="width: 100%; height: 100%; background: #D3D3D3D3">
+<body>
+    <div align="center" style="width: 100%; height: 100%; background: #D3D3D3">
         <h3>Enter the text</h3>
         <form action = "/successText" method = "post" enctype="multipart/form-data">
             <textarea rows="9" cols="140" name="texta"></textarea>
             <br><br>
             <label><b>Choose Your language:  </b></label>
-            <input type="radio" id="en" name="language" value="english">
+            <input type="radio" id="en" name="language" value="english" checked>
             <label for="en">English</label>
             <input type="radio" id="mt" name="language" value="marathi">
             <label for="mt">Marathi</label><br>
